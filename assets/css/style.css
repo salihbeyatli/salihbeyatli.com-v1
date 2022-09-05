@@ -373,10 +373,6 @@ nav {
     height: 20px;
 }
 
-svg.feather {
-    fill: none;
-}
-
 .social_Styled_SocialList::after {
     content: "";
     display: block;
@@ -637,6 +633,12 @@ p {
     z-index: -1;
 }
 
+.about_Styled_Pic:hover .wrapper::after {
+    border: 2px solid #64ffda;
+    top: 10px;
+    left: 10px;
+}
+
 .about_Styled_Pic .wrapper::before {
     top: 0px;
     left: 0px;
@@ -652,6 +654,10 @@ p {
     transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
+.about_Styled_Pic .wrapper .img:hover {
+    filter: grayscale(0%);
+}
+
 .gatsby-image-wrapper img {
     bottom: 0;
     height: 100%;
@@ -665,22 +671,7 @@ p {
     width: 100%;
     object-fit: cover;
 }
-
-img[alt=""], img:not([alt]) {
-    filter: blur(5px);
-}
-
-.gatsby-image-wrapper [data-main-image] {
-    opacity: 0;
-    transform: translateZ(0);
-    transition: opacity .25s linear;
-    will-change: opacity;
-}
 /* ABOUT END */
-/* JOBS START */
-.jdfosx {
-    max-width: 700px;
-}
 
 .numbered-heading::before {
     position: relative;
@@ -705,99 +696,6 @@ img[alt=""], img:not([alt]) {
     background-color: #233554;
 }
 
-.jdfosx .inner {
-    display: flex;
-}
-
-.jdfosx .inner {
-    min-height: 340px;
-}
-
-.sAHTI {
-    position: relative;
-    z-index: 3;
-    width: max-content;
-    padding: 0px;
-    margin: 0px;
-    list-style: none;
-}
-
-.deLjYW {
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    position: relative;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    width: 100%;
-    height: 42px;
-    padding: 0px 20px 2px;
-    border-left: 2px solid #233554;
-    background-color: transparent;
-    color: #64ffda;
-    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-    font-size: 13px;
-    text-align: left;
-    white-space: nowrap;
-}
-
-.jBtKSS {
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    position: relative;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    width: 100%;
-    height: 42px;
-    padding: 0px 20px 2px;
-    border-left: 2px solid #233554;
-    background-color: transparent;
-    color: #8892b0;
-    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-    font-size: 13px;
-    text-align: left;
-    white-space: nowrap;
-}
-
-.fLsUSJ {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 10;
-    width: 2px;
-    height: 42px;
-    border-radius: 4px;
-    background: #64ffda;
-    transform: translateY(calc(0 * 42px));
-    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
-}
-
-.jbGgbG {
-    position: relative;
-    width: 100%;
-    margin-left: 20px;
-}
-
-.QgHxr {
-    width: 100%;
-    height: auto;
-    padding: 10px 5px;
-}
-
-.QgHxr h3 {
-    margin-bottom: 2px;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 1.3;
-}
-
-.QgHxr h3 .company {
-    color: #64ffda;
-}
-
 a.inline-link {
     display: inline-block;
     text-decoration: none;
@@ -819,33 +717,6 @@ a.inline-link::after {
     opacity: 0.5;
 }
 
-.QgHxr .range {
-    margin-bottom: 25px;
-    color: #a8b2d1;
-    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
-    font-size: 13px;
-}
-
-.QgHxr ul {
-    padding: 0px;
-    margin: 0px;
-    list-style: none;
-    font-size: 18px;
-}
-
-.QgHxr ul li {
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 10px;
-}
-
-.QgHxr ul li::before {
-    content: "▹";
-    position: absolute;
-    left: 0px;
-    color: #64ffda;
-}
-/* JOBS END */
 /* WORKS START */
 .featured_Styled_ProjectsGrid {
     list-style: none;
@@ -1071,10 +942,6 @@ p > a::after {
     width: 100%;
     object-fit: cover;
 }
-
-img[alt=""], img:not([alt]) {
-    filter: blur(5px);
-}
 /* WORKS END */
 /* PROJECTS START */
 .projects_Styled_ProjectsSection {
@@ -1132,6 +999,11 @@ a.inline-link::after {
     position: relative;
     cursor: default;
     transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.projects_Styled_Project:hover{
+    top: -10px;
+    left: -10px;
 }
 
 .projects_Styled_Project .project-inner {
@@ -1263,6 +1135,10 @@ a.inline-link::after {
     padding: 1.25rem 1.75rem;
     margin: 80px auto 0px;
 }
+
+.projects_Styled_ProjectsSection .more-button:hover {
+    background-color: rgba(100, 255, 218, 0.15);
+}
 /* PROJECTS END */
 /* CONTACT START */
 .contact_Styled_ContactSection {
@@ -1302,6 +1178,10 @@ a.inline-link::after {
     cursor: pointer;
     transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
     margin-top: 50px;
+}
+
+.fadedown-contact:hover{
+    background-color:  rgba(100, 255, 218, 0.15);
 }
 /* CONTACT END */
 /* CONTENT END */
