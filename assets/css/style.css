@@ -1,0 +1,1375 @@
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+html {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    background-color: #0a192f;
+    color: #8892b0;
+    font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+#root {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 100%;
+}
+
+.layout_Styled_Content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+img, svg, .gatsby-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+    fill: currentcolor;
+    vertical-align: middle;
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+button {
+    cursor: pointer;
+    border: 0px;
+    border-radius: 0px;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px 0px 10px;
+    font-weight: 600;
+    color: #ccd6f6;
+    line-height: 1.1;
+}
+
+/* HEADER START */
+/* LOGO START */
+nav {
+    display: block;
+}
+
+.nav_Styled_Header {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 11;
+    padding: 0px 50px;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    filter: none !important;
+    pointer-events: auto !important;
+    user-select: auto !important;
+}
+
+.nav_Styled_Nav {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    color: #ccd6f6;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    counter-reset: item 0;
+    z-index: 12;
+}
+
+.nav_Styled_Nav .logo {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.nav_Styled_Nav .logo a {
+    color: #64ffda;
+    width: 42px;
+    height: 42px;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    user-select: none;
+}
+
+#logo {
+    color: #64ffda;
+}
+/* LOGO END */
+/* NAV MENU START */
+.nav_Styled_Links {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.nav_Styled_Links ol {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.nav_Styled_Links ol li {
+    margin: 0px 5px;
+    position: relative;
+    counter-increment: item 1;
+    font-size: 13px;
+}
+
+.nav_Styled_Links ol li a {
+    padding: 10px;
+}
+
+.nav_Styled_Links ol li a::before {
+    content: "0" counter(item) ".";
+    margin-right: 5px;
+    color: #64ffda;
+    font-size: 12px;
+    text-align: right;
+}
+
+.fadedown-enter-done a:hover {
+    color: #64ffda;
+}
+
+.nav_Styled_Links .resume-button {
+    color: #64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    margin-left: 15px;
+    font-size: 13px;
+}
+
+.fadedown-enter-done .resume-button:hover {
+    background-color: rgba(100, 255, 218, 0.15);
+}
+
+.menu_Styled {
+    display: none;
+}
+
+.menu_Styled_HamburgerButton {
+    display: none;
+}
+
+.menu_Styled_HamburgerButton .ham-box {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 24px;
+}
+
+.menu_Styled_HamburgerButton .ham-box-inner {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    width: 30px;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #64ffda;
+    transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+    transform: rotate(0deg);
+}
+
+.menu_Styled_Sidebar {
+    display: none;
+}
+
+.menu_Styled_Sidebar nav {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    color: #ccd6f6;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    text-align: center;
+}
+
+.menu_Styled_Sidebar ol {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    width: 100%;
+}
+
+.menu_Styled_Sidebar ol li {
+    position: relative;
+    margin: 0px auto 20px;
+    counter-increment: item 1;
+    font-size: clamp(14px,4vw,18px);
+}
+
+.menu_Styled_Sidebar ol a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: #8892b0;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    width: 100%;
+    padding: 3px 20px 20px;
+}
+
+.menu_Styled_Sidebar .resume-link {
+    color: #64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    padding: 18px 50px;
+    margin: 10% auto 0px;
+    width: max-content;
+}
+/* NAV MENU END */
+/* HEADER END */
+
+/* LEFT SİDE START */
+.side_Styled_SideElement_L {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    right: auto;
+    z-index: 10;
+    color: #a8b2d1;
+}
+
+.social_Styled_SocialList {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.social_Styled_SocialList li a {
+    padding: 10px;
+}
+
+.social_Styled_SocialList li a svg {
+    width: 20px;
+    height: 20px;
+}
+
+svg.feather {
+    fill: none;
+}
+
+.social_Styled_SocialList::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: #a8b2d1;
+}
+
+.fadedown-enter-done a svg{
+    transition: 200ms;
+}
+
+.fadedown-enter-done a svg:hover {
+    color: #64ffda;
+    transition: 200ms;
+}
+/* LEFT SİDE END */
+
+/* RİGHT SİDE START */
+.side_Styled_SideElement_R {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: auto;
+    right: 40px;
+    z-index: 10;
+    color: #a8b2d1;
+}
+
+.email_Styled_LinkWrapper {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.email_Styled_LinkWrapper a {
+    margin: 20px auto;
+    padding: 10px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+.email_Styled_LinkWrapper::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: #a8b2d1;
+}
+/* RİGHT SİDE END */
+
+/* CONTENT START */
+main {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1600px;
+    min-height: 100vh;
+    padding: 200px 150px;
+}
+
+.pages_Styled_MainContainer {
+    counter-reset: section 0;
+}
+
+main.fillHeight {
+    padding: 0px 150px;
+}
+/* HERO START */
+section {
+    margin: 0px auto;
+    padding: 100px 0px;
+    max-width: 1000px;
+}
+.hero_Styled_HeroSection {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 0px;
+}
+
+.hero_Styled_HeroSection h1 {
+    margin: 0px 0px 30px 4px;
+    color: #64ffda;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: clamp(14px,5vw,16px);
+    font-weight: 400;
+}
+
+.big-heading {
+    margin: 0px;
+    font-size: clamp(40px, 8vw, 80px);
+}
+
+.hero_Styled_HeroSection h3 {
+    margin-top: 10px;
+    color: #8892b0;
+    line-height: 0.9;
+}
+
+.hero_Styled_HeroSection p {
+    margin: 20px 0px 0px;
+    max-width: 540px;
+}
+
+p > a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    color: #64ffda;
+}
+
+p > a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: #64ffda;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    opacity: 0.5;
+}
+
+.hero_Styled_HeroSection .email-link {
+    color: #64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: 14px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    margin-top: 50px;
+}
+/* HERO END */
+/* ABOUT START */
+.about_Styled_AboutSection {
+    max-width: 900px;
+}
+
+.numbered-heading {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0px 40px;
+    width: 100%;
+    font-size: clamp(26px,5vw,32px);
+    white-space: nowrap;
+}
+
+.numbered-heading::before {
+    position: relative;
+    bottom: 4px;
+    counter-increment: section 1;
+    content: "0" counter(section) ".";
+    margin-right: 10px;
+    color: #64ffda;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: clamp(16px,3vw,20px);
+    font-weight: 400;
+}
+
+.numbered-heading::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -5px;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: #233554;
+}
+
+.about_Styled_AboutSection .inner {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+}
+
+p {
+    margin: 0px 0px 15px;
+}
+
+.about_Styled_Text ul.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0px 10px;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    overflow: hidden;
+    list-style: none;
+}
+
+.about_Styled_Text ul.skills-list li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 13px;
+}
+
+.about_Styled_Text ul.skills-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    color: #64ffda;
+    font-size: 14px;
+    line-height: 12px;
+}
+
+.about_Styled_Pic {
+    position: relative;
+    max-width: 300px;
+}
+
+.about_Styled_Pic .wrapper {
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: 4px;
+    background-color: #64ffda;
+}
+
+.about_Styled_Pic .wrapper::before, .about_Styled_Pic .wrapper::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.about_Styled_Pic .wrapper::after {
+    border: 2px solid #64ffda;
+    top: 20px;
+    left: 20px;
+    z-index: -1;
+}
+
+.about_Styled_Pic .wrapper::before {
+    top: 0px;
+    left: 0px;
+    background-color: #0a192f;
+    mix-blend-mode: screen;
+}
+
+.about_Styled_Pic .wrapper .img {
+    position: relative;
+    border-radius: 4px;
+    mix-blend-mode: multiply;
+    filter: grayscale(100%) contrast(1);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.gatsby-image-wrapper img {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+img[alt=""], img:not([alt]) {
+    filter: blur(5px);
+}
+
+.gatsby-image-wrapper [data-main-image] {
+    opacity: 0;
+    transform: translateZ(0);
+    transition: opacity .25s linear;
+    will-change: opacity;
+}
+/* ABOUT END */
+/* JOBS START */
+.jdfosx {
+    max-width: 700px;
+}
+
+.numbered-heading::before {
+    position: relative;
+    bottom: 4px;
+    counter-increment: section 1;
+    content: "0" counter(section) ".";
+    margin-right: 10px;
+    color: #64ffda;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: clamp(16px,3vw,20px);
+    font-weight: 400;
+}
+
+.numbered-heading::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -5px;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: #233554;
+}
+
+.jdfosx .inner {
+    display: flex;
+}
+
+.jdfosx .inner {
+    min-height: 340px;
+}
+
+.sAHTI {
+    position: relative;
+    z-index: 3;
+    width: max-content;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.deLjYW {
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    padding: 0px 20px 2px;
+    border-left: 2px solid #233554;
+    background-color: transparent;
+    color: #64ffda;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 13px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.jBtKSS {
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    padding: 0px 20px 2px;
+    border-left: 2px solid #233554;
+    background-color: transparent;
+    color: #8892b0;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 13px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.fLsUSJ {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 2px;
+    height: 42px;
+    border-radius: 4px;
+    background: #64ffda;
+    transform: translateY(calc(0 * 42px));
+    transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+}
+
+.jbGgbG {
+    position: relative;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.QgHxr {
+    width: 100%;
+    height: auto;
+    padding: 10px 5px;
+}
+
+.QgHxr h3 {
+    margin-bottom: 2px;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.QgHxr h3 .company {
+    color: #64ffda;
+}
+
+a.inline-link {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    color: #64ffda;
+}
+
+a.inline-link::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: #64ffda;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    opacity: 0.5;
+}
+
+.QgHxr .range {
+    margin-bottom: 25px;
+    color: #a8b2d1;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 13px;
+}
+
+.QgHxr ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    font-size: 18px;
+}
+
+.QgHxr ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.QgHxr ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    color: #64ffda;
+}
+/* JOBS END */
+/* WORKS START */
+.featured_Styled_ProjectsGrid {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.featured_StyledProject {
+    position: relative;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(12, 1fr);
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.featured_StyledProject:not(:last-of-type) {
+    margin-bottom: 100px;
+}
+
+.featured_StyledProject .project-content {
+    position: relative;
+    grid-area: 1 / 1 / -1 / 7;
+}
+
+.featured_StyledProject:nth-of-type(2n+1) .project-content {
+    grid-column: 7 / -1;
+    text-align: right;
+}
+
+.featured_StyledProject .project-overline {
+    margin: 10px 0px;
+    color: #64ffda;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.featured_StyledProject .project-title {
+    margin: 0px 0px 20px;
+}
+
+.featured_StyledProject .project-title {
+    color: #ccd6f6;
+    font-size: clamp(24px, 5vw, 28px);
+}
+
+.featured_Styled_ProjectsGrid a {
+    position: relative;
+    z-index: 1;
+}
+
+.featured_StyledProject .project-description {
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    border-radius: 4px;
+    background-color: #112240;
+    color: #a8b2d1;
+    font-size: 18px;
+}
+
+.featured_StyledProject .project-description a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    color: #64ffda;
+}
+
+.featured_StyledProject .project-description a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: #64ffda;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    opacity: 0.5;
+}
+
+p > a::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: #64ffda;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    opacity: 0.5;
+}
+
+.featured_StyledProject .project-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    margin: 25px 0px 10px;
+    padding: 0px;
+    list-style: none;
+}
+
+.featured_StyledProject:nth-of-type(2n+1) .project-tech-list {
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+}
+
+.featured_StyledProject .project-tech-list li {
+    margin: 0px 20px 5px 0px;
+    color: #a8b2d1;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.featured_StyledProject:nth-of-type(2n+1) .project-tech-list li {
+    margin: 0px 0px 5px 20px;
+}
+
+.featured_StyledProject .project-links {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+    margin-left: -10px;
+    color: #ccd6f6;
+}
+
+.featured_StyledProject:nth-of-type(2n+1) .project-links {
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    margin-left: 0px;
+    margin-right: -10px;
+}
+
+.featured_Styled_ProjectsGrid a {
+    position: relative;
+    z-index: 1;
+}
+
+.featured_StyledProject .project-links a {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.featured_StyledProject .project-links a svg {
+    width: 20px;
+    height: 20px;
+}
+
+.featured_StyledProject .project-image {
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    grid-area: 1 / 6 / -1 / -1;
+    position: relative;
+    z-index: 1;
+}
+
+.featured_StyledProject:nth-of-type(2n+1) .project-image {
+    grid-column: 1 / 8;
+}
+
+.featured_Styled_ProjectsGrid a {
+    position: relative;
+    z-index: 1;
+}
+
+.featured_StyledProject .project-image a {
+    width: 100%;
+    height: 100%;
+    background-color: #64ffda;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.featured_StyledProject .project-image a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0px;
+    z-index: 3;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    background-color: #0a192f;
+    mix-blend-mode: screen;
+}
+
+.gatsby-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.gatsby-image-wrapper-constrained {
+    display: inline-block;
+}
+
+.featured_StyledProject .project-image .img {
+    border-radius: 4px;
+    mix-blend-mode: multiply;
+    filter: grayscale(100%) contrast(1) brightness(90%);
+}
+
+.gatsby-image-wrapper img {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    max-width: none;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+img[alt=""], img:not([alt]) {
+    filter: blur(5px);
+}
+/* WORKS END */
+/* PROJECTS START */
+.projects_Styled_ProjectsSection {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.projects_Styled_ProjectsSection h2 {
+    font-size: clamp(24px,5vw,32px);
+}
+
+a.inline-link {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    color: #64ffda;
+}
+
+.projects_Styled_ProjectsSection .archive-link {
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 14px;
+}
+
+a.inline-link::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: #64ffda;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    opacity: 0.5;
+}
+
+.projects_Styled_ProjectsSection .archive-link::after {
+    bottom: 0.1em;
+}
+
+.projects_Styled_ProjectsSection .projects-grid {
+    list-style: none;
+    padding: 0px;
+    margin: 50px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    position: relative;
+}
+
+.projects_Styled_Project {
+    position: relative;
+    cursor: default;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+}
+
+.projects_Styled_Project .project-inner {
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    height: 100%;
+    padding: 2rem 1.75rem;
+    border-radius: 4px;
+    background-color: #112240;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    overflow: auto;
+}
+
+.projects_Styled_Project .project-top {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.projects_Styled_Project .project-top .folder {
+    color: #64ffda;
+}
+
+.projects_Styled_Project .project-top .folder svg {
+    width: 40px;
+    height: 40px;
+}
+
+.projects_Styled_Project .project-top .project-links {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-right: -10px;
+    color: #a8b2d1;
+}
+
+.projects_Styled_Project a {
+    position: relative;
+    z-index: 1;
+}
+
+.projects_Styled_Project .project-top .project-links a {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 5px 7px;
+}
+
+.projects_Styled_Project .project-top .project-links a svg {
+    width: 20px;
+    height: 20px;
+}
+
+.projects_Styled_Project .project-top .project-links a.external svg {
+    width: 22px;
+    height: 22px;
+    margin-top: -4px;
+}
+
+.projects_Styled_Project .project-title {
+    margin: 0px 0px 10px;
+    color: #ccd6f6;
+    font-size: 22px;
+}
+
+.projects_Styled_Project .project-title a {
+    position: static;
+}
+
+.projects_Styled_Project .project-title a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+.projects_Styled_Project .project-description {
+    color: #a8b2d1;
+    font-size: 17px;
+}
+
+.projects_Styled_Project .project-tech-list {
+    display: flex;
+    align-items: flex-end;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    list-style: none;
+}
+
+.projects_Styled_Project .project-tech-list li {
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 12px;
+    line-height: 1.75;
+}
+
+.projects_Styled_Project .project-tech-list li:not(:last-of-type) {
+    margin-right: 15px;
+}
+
+.projects_Styled_ProjectsSection .more-button {
+    color: #64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    padding: 1.25rem 1.75rem;
+    margin: 80px auto 0px;
+}
+/* PROJECTS END */
+/* CONTACT START */
+.contact_Styled_ContactSection {
+    max-width: 600px;
+    margin: 0px auto 100px;
+    text-align: center;
+}
+
+.contact_Styled_ContactSection .overline {
+    display: block;
+    margin-bottom: 20px;
+    color: #64ffda;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contact_Styled_ContactSection .overline::before {
+    bottom: 0px;
+    font-size: 14px;
+}
+
+.contact_Styled_ContactSection .title {
+    font-size: clamp(40px, 5vw, 60px);
+}
+
+.contact_Styled_ContactSection .email-link {
+    color: #64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: 14px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    margin-top: 50px;
+}
+/* CONTACT END */
+/* CONTENT END */
+/* FOOTER START */
+.footer_Styled_Footer {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    min-height: 70px;
+    padding: 15px;
+    text-align: center;
+}
+
+.footer_Styled_SocialLinks {
+    display: none;
+}
+
+.footer_Styled_SocialLinks ul {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.footer_Styled_SocialLinks ul a {
+    padding: 10px;
+}
+
+.footer_Styled_SocialLinks ul a svg {
+    width: 20px;
+    height: 20px;
+}
+
+.footer_Styled_Credit {
+    color: #a8b2d1;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-size: 12px;
+    line-height: 1;
+}
+
+.footer_Styled_Credit a {
+    padding: 10px;
+}
+
+.footer_Styled_Credit .github-stats {
+    margin-top: 10px;
+}
+
+.footer_Styled_Credit .github-stats > span {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px 7px;
+}
+
+.footer_Styled_Credit .github-stats svg {
+    display: inline-block;
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+}
+/* FOOTER END */
+
