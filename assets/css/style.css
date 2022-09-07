@@ -1374,6 +1374,15 @@ tbody {
     flex-shrink: 0;
 }
 
+.kgfDTC table td.links div a svg:hover{
+    color: #64ffda;
+    transition: 200ms;
+}
+
+.kgfDTC table td.links div a svg{
+    transition: 200ms;
+}
+
 .kgfDTC table th svg, .kgfDTC table td svg {
     width: 20px;
     height: 20px;
