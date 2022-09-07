@@ -1253,3 +1253,133 @@ a.inline-link::after {
 }
 /* FOOTER END */
 
+
+/* ARCHİVE START */
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.subtitle {
+    color: #64ffda;
+    margin: 0px 0px 20px;
+    font-size: 16px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.kgfDTC {
+    margin: 100px -20px;
+}
+
+.kgfDTC table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.kgfDTC table tr {
+    cursor: default;
+}
+
+.kgfDTC table th:first-child, .kgfDTC table td:first-child {
+    padding-left: 20px;
+}
+
+.kgfDTC table th, .kgfDTC table td {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.kgfDTC table tr {
+    cursor: default;
+}
+
+.kgfDTC table td.year {
+    padding-right: 20px;
+}
+
+.kgfDTC table tr td:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.kgfDTC table td.title {
+    padding-top: 15px;
+    padding-right: 20px;
+    color: #ccd6f6;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.kgfDTC table td.company {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.kgfDTC table td.tech {
+    font-size: 12px;
+    font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    line-height: 1.5;
+}
+
+.kgfDTC table td.tech span {
+    display: inline-block;
+}
+
+.kgfDTC table td.links {
+    min-width: 100px;
+}
+
+.kgfDTC table tr td:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.kgfDTC table td.links div {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.kgfDTC table td.links div a {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.kgfDTC table th svg, .kgfDTC table td svg {
+    width: 20px;
+    height: 20px;
+}
+
+svg.feather {
+    fill: none;
+}
+/* ARCHİVE END */
